@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="Automation_Type" value="Mobile" />
+    <parameter name="Device_Name" value="emulator-5554" />
+    <parameter name="AVD_Name" value="Pixel_2_API_29_1" />
+    <test verbose="2" preserve-order="true" name="/Users/ladmin.ns/Desktop/android_app">
+        <groups>
+            <run>
+                <include name="Mobile_Chrome"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Main.Regression"/>
+        </classes>
+    </test>
+</suite>
