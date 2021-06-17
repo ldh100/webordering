@@ -49,7 +49,7 @@ public class config extends Regression {
     }
 
     public WebDriver init_Web_Chrome(){
-        System.setProperty("webdriver.chrome.driver","/Users/ladmin.jc/Desktop/WebOrdering/chromedriver");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://dev.thriveapp.io/");
