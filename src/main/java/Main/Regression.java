@@ -42,6 +42,10 @@ public class Regression {
         obj_WebHompage.Menu_Location(AutomationType);
         obj_WebHompage.Select_Location(AutomationType);
         obj_WebHompage.Login_Desktop(AutomationType);
+<<<<<<< HEAD
+=======
+        obj_WebHompage.Add_Items(AutomationType);
+>>>>>>> bc6a89ba08b5c8a52b0269b881e713d29ef1ead6
         Thread.sleep(8000);
 
     }

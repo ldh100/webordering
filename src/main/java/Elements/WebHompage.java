@@ -62,6 +62,19 @@ public class WebHompage extends Regression {
     @FindBy(xpath = "//button[@class='v-btn v-btn--contained theme--light v-size--default']//span[@class='v-btn__content']")
     public WebElement Email_login;
 
+<<<<<<< HEAD
+=======
+    @FindBy(id = "41pwNJPNRWCB7RAQl7AKTNdlDLkZ3EH651ERZrKafKq66PJBA2C4rEmG3Z83tK3o6AE4oOse5X9")
+    public WebElement Brand_Selection;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div/main/div/div/div/div[1]/div[2]/div/div/span/div[2]/div/div/div[1]/div/div/div[3]")
+    public WebElement Item_Selection;
+
+    @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+    public WebElement Add_to_Basket;
+
+
+>>>>>>> bc6a89ba08b5c8a52b0269b881e713d29ef1ead6
     @FindBy(xpath = "//h4[normalize-space()='Support Desk']")
     public WebElement Menu_Support;
 
@@ -174,8 +187,13 @@ public class WebHompage extends Regression {
     }
 
     //login method
+<<<<<<< HEAD
     public void Login_Desktop(String Automation_type) throws InterruptedException{
         if (Automation_type.equals("Web")){
+=======
+    public void Login_Desktop(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")) {
+>>>>>>> bc6a89ba08b5c8a52b0269b881e713d29ef1ead6
             Home_Login.click();
             Thread.sleep(4000);
             Email_text.sendKeys("gagandev@mailsac.com");
@@ -187,8 +205,22 @@ public class WebHompage extends Regression {
 
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc6a89ba08b5c8a52b0269b881e713d29ef1ead6
 
+    //add items to basket
+    public void Add_Items(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")){
+            Brand_Selection.click();
+            Thread.sleep(4000);
+            Item_Selection.click();
+            Thread.sleep(4000);
+            Add_to_Basket.click();
+            Thread.sleep(4000);
 
+        }
+    }
 
 }
