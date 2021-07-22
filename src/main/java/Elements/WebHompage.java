@@ -72,6 +72,17 @@ public class WebHompage extends Regression {
     @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
     public WebElement Add_to_Basket;
 
+    @FindBy(xpath = "//button[@class='v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+    public WebElement Checkout_Button;
+
+    @FindBy(xpath = "(//i[@class='v-icon notranslate mdi mdi-menu-down theme--light'])[2]")
+    public WebElement Select_Payment;
+
+    @FindBy(xpath = "//body/div/div[@class='v-application v-application--is-ltr theme--light page-background']/div[@class='v-menu__content theme--light menuable__content__active']/div[@role='listbox']/div[3]/div[1]")
+    public WebElement Select_CC;
+
+    @FindBy(xpath = "//p[normalize-space()='Place order']")
+    public WebElement PlaceOrder_CTA;
 
     @FindBy(xpath = "//h4[normalize-space()='Support Desk']")
     public WebElement Menu_Support;
@@ -180,7 +191,7 @@ public class WebHompage extends Regression {
             Enter_Loc.sendKeys("KK");
             Thread.sleep(4000);
             Select_Loc.click();
-            Thread.sleep(4000);
+            Thread.sleep(10000);
         }
     }
 
@@ -201,18 +212,44 @@ public class WebHompage extends Regression {
     }
 
 
-
-            //add items to basket
-            public void Add_Items(String Automation_type) throws InterruptedException {
-                if (Automation_type.equals("Web")) {
-                    Brand_Selection.click();
-                    Thread.sleep(4000);
-                    Item_Selection.click();
-                    Thread.sleep(4000);
-                    Add_to_Basket.click();
-                    Thread.sleep(4000);
-
-                }
-            }
+    //add items to basket
+    public void Add_Items(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")) {
+            Brand_Selection.click();
+            Thread.sleep(4000);
+            Item_Selection.click();
+            Thread.sleep(4000);
+            Add_to_Basket.click();
+            Thread.sleep(4000);
 
         }
+    }
+
+    //checkout
+    public void Checkout(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")) {
+            Checkout_Button.click();
+            Thread.sleep(4000);
+        }
+    }
+
+    //select payment method on checkout
+    public void Payment_Selection(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")) {
+            Select_Payment.click();
+            Thread.sleep(4000);
+            Select_CC.click();
+            Thread.sleep(4000);
+        }
+    }
+
+    public void Place_Order(String Automation_type) throws InterruptedException {
+        if (Automation_type.equals("Web")) {
+            PlaceOrder_CTA.click();
+            Thread.sleep(4000);
+
+        }
+
+
+    }
+}

@@ -42,17 +42,18 @@ public class Regression {
         obj_WebHompage.Menu_Location(AutomationType);
         obj_WebHompage.Select_Location(AutomationType);
         obj_WebHompage.Login_Desktop(AutomationType);
-
         obj_WebHompage.Add_Items(AutomationType);
-
+        obj_WebHompage.Checkout(AutomationType);
+        obj_WebHompage.Payment_Selection(AutomationType);
+        obj_WebHompage.Place_Order(AutomationType);
         Thread.sleep(8000);
 
     }
 
-    @AfterMethod(groups = {"Mobile_Chrome", "Web_Chrome"})
-    public void tearDown() {
-        driver.quit();
-    }
+   // @AfterMethod(groups = {"Mobile_Chrome", "Web_Chrome"})
+   // public void tearDown() {
+     //   driver.quit();
+   // }
 
 
 }
