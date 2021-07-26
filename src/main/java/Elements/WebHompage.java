@@ -1,6 +1,7 @@
 package Elements;
 
 import Main.Regression;
+import com.relevantcodes.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -142,6 +143,8 @@ public class WebHompage extends Regression {
             Thread.sleep(4000);
             Menu_Signup_close.click();
             Thread.sleep(4000);
+
+            //obj_config.Extent_Result( "PASS",  " is available in URL screenshot attached: " );
             //Menu_Support.click();
             //Thread.sleep(4000);
             //Menu_support_Close.click();
@@ -225,31 +228,4 @@ public class WebHompage extends Regression {
         }
     }
 
-    //checkout
-    public void Checkout(String Automation_type) throws InterruptedException {
-        if (Automation_type.equals("Web")) {
-            Checkout_Button.click();
-            Thread.sleep(4000);
-        }
-    }
-
-    //select payment method on checkout
-    public void Payment_Selection(String Automation_type) throws InterruptedException {
-        if (Automation_type.equals("Web")) {
-            Select_Payment.click();
-            Thread.sleep(4000);
-            Select_CC.click();
-            Thread.sleep(4000);
-        }
-    }
-
-    public void Place_Order(String Automation_type) throws InterruptedException {
-        if (Automation_type.equals("Web")) {
-            PlaceOrder_CTA.click();
-            Thread.sleep(4000);
-
-        }
-
-
-    }
 }
