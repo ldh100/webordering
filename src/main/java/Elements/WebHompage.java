@@ -64,14 +64,8 @@ public class WebHompage extends Regression {
     public WebElement Email_login;
 
 
-    @FindBy(id = "41pwNJPNRWCB7RAQl7AKTNdlDLkZ3EH651ERZrKafKq66PJBA2C4rEmG3Z83tK3o6AE4oOse5X9")
-    public WebElement Brand_Selection;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div/main/div/div/div/div[1]/div[2]/div/div/span/div[2]/div/div/div[1]/div/div/div[3]")
-    public WebElement Item_Selection;
 
-    @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
-    public WebElement Add_to_Basket;
 
     @FindBy(xpath = "//button[@class='v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
     public WebElement Checkout_Button;
@@ -110,18 +104,6 @@ public class WebHompage extends Regression {
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[6]")
     public WebElement Mobile_login_button;
-
-    //public void Login_Test(String Automation_type) throws InterruptedException {
-    //   if (Automation_type.equals("Mobile")) {
-    //     Hamburger.click();
-    //   Thread.sleep(5000);
-    // Mobile_login_button.click();
-    //}
-//else if (Automation_type.equals("Web"))
-    //          {
-    //            Menu_Button.click();
-    //      }
-    // }
 
     //checking visibility of buttons on home page and links under Menu dashboard
     public void Homepage_Visibility(String Automation_type) throws InterruptedException {
@@ -213,19 +195,4 @@ public class WebHompage extends Regression {
 
         }
     }
-
-
-    //add items to basket
-    public void Add_Items(String Automation_type) throws InterruptedException {
-        if (Automation_type.equals("Web")) {
-            Brand_Selection.click();
-            Thread.sleep(4000);
-            Item_Selection.click();
-            Thread.sleep(4000);
-            Add_to_Basket.click();
-            Thread.sleep(4000);
-
-        }
-    }
-
 }
