@@ -173,7 +173,7 @@ public class WebHompage extends Regression {
 
     public void Select_Location(String Automation_type) throws InterruptedException {
         if (Automation_type.equals("Web")) {
-            Enter_Loc.sendKeys("KK");
+            Enter_Loc.sendKeys("New location - KK - 30th Sept, 2020");
             Thread.sleep(4000);
             Select_Loc.click();
             Thread.sleep(10000);

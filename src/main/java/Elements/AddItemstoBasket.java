@@ -26,6 +26,7 @@ public class AddItemstoBasket extends Regression {
     @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
     public WebElement Add_to_Basket;
 
+
     public void Add_Items(String Automation_type) throws InterruptedException {
         if (Automation_type.equals("Web")) {
             Thread.sleep(4000);
@@ -38,7 +39,6 @@ public class AddItemstoBasket extends Regression {
 
         }
     }
-
 
 
 }
