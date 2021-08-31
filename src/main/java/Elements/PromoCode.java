@@ -24,7 +24,8 @@ public class PromoCode extends Regression {
     @FindBy(xpath = "//span[@class='promo-button-txt']")
     public WebElement Apply_Promotion;
 
-    @FindBy(xpath = "//button[@class='v-icon notranslate promo-button pa-6 v-icon--link mdi mdi-close-circle theme--light']")
+    // @FindBy(xpath = "//button[@class='v-icon notranslate promo-button pa-6 v-icon--link mdi mdi-close-circle theme--light']")
+    @FindBy(id = "remove-promo")
     public WebElement Delete_Promo;
 
     // apply promo code
@@ -36,6 +37,7 @@ public class PromoCode extends Regression {
             Thread.sleep(4000);
         }
     }
+
     // delete promo and re-apply
     public void Delete_Promo_and_Reapply(String Automation_type) throws InterruptedException {
         if (Automation_type.equals("Web")) {
@@ -46,7 +48,6 @@ public class PromoCode extends Regression {
             Thread.sleep(4000);
         }
     }
-
 
 
 }

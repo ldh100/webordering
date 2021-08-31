@@ -19,32 +19,30 @@ public class CheckoutWO extends Regression {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//button[@class='v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+    @FindBy(id = "brand-to-checkout")
     public WebElement Checkout_Button;
 
     @FindBy(xpath = "//a[normalize-space()='Order More']")
     public WebElement Order_More;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/main/div/div/div/div[1]/div[2]/div/div/span/div[2]/div/div/div[1]/div/div/div[5]/div")
+    @FindBy(id = "item-label-4")
     public WebElement Second_item_Selection;
 
-    @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+    @FindBy(id = "add-to-basket")
     public WebElement Add_to_Basket;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/main/div/div/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/span/button")
+    @FindBy(id = "remove-item-icon-0")
     public WebElement Delete_Item_From_Basket;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/main/div/div/div/div/div/div[1]/div/div/div/div[1]/div/div[1]/span/button")
+    @FindBy(id = "remove-item-icon-0")
     public WebElement Delete_Item_In_Checkout;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/main/div/div/div/div[2]/button")
     public WebElement KeepBrowsing;
 
-    @FindBy(xpath = "(//i[@class='v-icon notranslate mdi mdi-menu-down theme--light'])[2]")
-   // @FindBy(xpath = "//*[@id=\"app\"]/div[1]/main/div/div/div/div/div/div[2]/div/div/div[1]/div[2]/div/div/div[1]/div[1]/div[1]")
+    @FindBy(xpath = "//div[@class='v-select__selection v-select__selection--comma'][normalize-space()='Use a New Card']")
     public WebElement Select_Payment;
 
-    // @FindBy(xpath = "//body/div/div[@class='v-application v-application--is-ltr theme--light page-background']/div[@class='v-menu__content theme--light menuable__content__active']/div[@role='listbox']/div[3]/div[1]")
     @FindBy(xpath = "//div[contains(text(),'1111')]")
     public WebElement Select_CC;
 
@@ -63,7 +61,8 @@ public class CheckoutWO extends Regression {
     public WebElement Delivery_Toggle;
 
 
-    @FindBy(xpath = "//p[normalize-space()='Place Order']")
+    // @FindBy(xpath = "//p[normalize-space()='Place Order']")
+    @FindBy(id = "place-order")
     public WebElement PlaceOrder_CTA;
 
     //checkout
@@ -84,15 +83,12 @@ public class CheckoutWO extends Regression {
             Thread.sleep(4000);
             Add_to_Basket.click();
             Thread.sleep(6000);
-            // Thread.sleep(4000);
-            // Checkout_Button.click();
         }
     }
 
     //delete item from basket
     public void DeleteItem_From_Basket(String Automation_type) throws InterruptedException {
         if (Automation_type.equals("Web")) {
-            Thread.sleep(4000);
             Delete_Item_From_Basket.click();
             Thread.sleep(4000);
 

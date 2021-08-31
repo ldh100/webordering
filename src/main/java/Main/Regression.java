@@ -71,6 +71,7 @@ public class Regression {
         obj_Add_Items_toBasket.Add_Items(AutomationType);
         obj_CheckoutWo.Checkout(AutomationType);
         obj_CheckoutWo.OrderMore(AutomationType);
+        obj_CheckoutWo.Checkout(AutomationType);
         obj_CheckoutWo.Payment_Selection(AutomationType);
         obj_PromoCode.Apply_Promocode(AutomationType);
         obj_PromoCode.Delete_Promo_and_Reapply(AutomationType);
