@@ -17,13 +17,15 @@ public class AddItemstoBasket extends Regression {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "41pwNJPNRWCB7RAQl7AKTNdlDLkZ3EH651ERZrKafKq66PJBA2C4rEmG3Z83tK3o6AE4oOse5X9")
+    @FindBy(id = "brand-label-0")
     public WebElement Brand_Selection;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div/main/div/div/div/div[1]/div[2]/div/div/span/div[2]/div/div/div[1]/div/div/div[3]")
+    //@FindBy(xpath = "//*[@id=\"app\"]/div/main/div/div/div/div[1]/div[2]/div/div/span/div[2]/div/div/div[1]/div/div/div[3]")
+    @FindBy(id = "item-label-2")
     public WebElement Item_Selection;
 
-    @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+   // @FindBy(xpath = "//button[@class='add-to-cart v-btn v-btn--contained v-btn--tile theme--light v-size--default']")
+    @FindBy(id = "add-to-basket")
     public WebElement Add_to_Basket;
 
 
@@ -35,7 +37,7 @@ public class AddItemstoBasket extends Regression {
             Item_Selection.click();
             Thread.sleep(4000);
             Add_to_Basket.click();
-            Thread.sleep(4000);
+            Thread.sleep(6000);
 
         }
     }
