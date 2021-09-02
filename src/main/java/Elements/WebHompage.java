@@ -91,8 +91,9 @@ public class WebHompage extends Regression {
     @FindBy(xpath = "(//p[@class='mt-1 switch-form-text'][normalize-space()='Close'])[2]")
     public WebElement Mobile_Login_Close;
 
-    @FindBy(xpath = "//div[@class='row mt-3 align-end switch-form justify-end no-gutters']//p[@class='mt-1 switch-form-text'][normalize-space()='Close']")
+    @FindBy(xpath = "//div[@role='document']//div//div//div//div//div//p[contains(text(),'Close')]")
     public WebElement Mobile_Signup_Close;
+
     @FindBy(xpath = "//video[@class='fetch-sites-loader']")
     public WebElement search_message;
 
