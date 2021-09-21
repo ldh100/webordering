@@ -21,7 +21,7 @@ public class PromoCode extends Regression {
     @FindBy(xpath = "//div[@class='v-text-field__slot']//input[@type='text']")
     public WebElement Add_Promo;
 
-    @FindBy(xpath = "//span[@class='promo-button-txt']")
+    @FindBy(id = "apply-promo")
     public WebElement Apply_Promotion;
 
     // @FindBy(xpath = "//button[@class='v-icon notranslate promo-button pa-6 v-icon--link mdi mdi-close-circle theme--light']")
